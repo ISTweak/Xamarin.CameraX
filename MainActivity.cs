@@ -45,6 +45,8 @@ namespace CameraX
             this.viewFinder = this.FindViewById<PreviewView>(Resource.Id.viewFinder);
             var camera_capture_button = this.FindViewById<Button>(Resource.Id.camera_capture_button);
 
+            //viewFinder.PreferredImplementationMode = PreviewView.ImplementationMode.TextureView;
+
             // Request camera permissions   
             string[] permissions = new string[] { Manifest.Permission.Camera, Manifest.Permission.WriteExternalStorage };
             if (permissions.FirstOrDefault(x => ContextCompat.CheckSelfPermission(this, x) != Android.Content.PM.Permission.Granted) != null) //   ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == Android.Content.PM.Permission.Granted)
